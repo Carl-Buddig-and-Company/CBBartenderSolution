@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="LabelMonitor" />
+  <setParameter name="WarehouseConnectionString1-Web.config Connection String" value="DSN=Warehouse;Description=Warehouse;UID=bkinser;Trusted_Connection=Yes;APP=Microsoft® Visual Studio®;WSID=BKINSER2020;DATABASE=Warehouse" />
+  <setParameter name="WarehouseConnectionStringTest1-Web.config Connection String" value="DSN=Warehouse;Description=Warehouse;UID=sa;Trusted_Connection=Yes;APP=Microsoft® Visual Studio®;DATABASE=Warehouse" />
+</parameters>

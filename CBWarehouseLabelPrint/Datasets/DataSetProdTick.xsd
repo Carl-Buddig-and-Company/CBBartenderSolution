@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetProdTick" targetNamespace="http://tempuri.org/DataSetProdTick.xsd" xmlns:mstns="http://tempuri.org/DataSetProdTick.xsd" xmlns="http://tempuri.org/DataSetProdTick.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DALConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DALConnectionString (MySettings)" PropertyReference="ApplicationSettings.CBWarehouseLabelPrint.My.MySettings.GlobalReference.Default.DALConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwProdTickTableAdapter" GeneratorDataComponentClassName="vwProdTickTableAdapter" Name="vwProdTick" UserDataComponentName="vwProdTickTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="Warehouse.dbo.vwProdTick" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MfgOrd, GTIN, ItmUpc, ProdNo, Version, PackQty, SpecPack, PriceCode, ProdDesc, DateProd, PrivLbl, ProdSize, YYMMDD, FunDate, CnFunDate, AldiFunDate, SrgFunDate, PackDate, NoNmFunDate, CertNum, [Format Name], UseByDte, YYMMDD55, Code55, FunDate55, MexFunDate, SpanishDescr, WMPartNum, EnglishDescr, DDMMYYDate, Ingredients, NetWeight, DateInFile, WMUPC, ContNeto, SpanishDescr2, EnglishDescr2, FSProdDesc, NetWt, FrenchDescr, EnglishDescr3, USDA_Est, NoNameFrenchDescr, NoNameEnglishDescr, ButCutFrenchDescr, ButCutEnglishDescr, PackDesc, AltIngrList, MexProdDate FROM dbo.vwProdTick</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MfgOrd" DataSetColumn="MfgOrd" />
+              <Mapping SourceColumn="GTIN" DataSetColumn="GTIN" />
+              <Mapping SourceColumn="ItmUpc" DataSetColumn="ItmUpc" />
+              <Mapping SourceColumn="ProdNo" DataSetColumn="ProdNo" />
+              <Mapping SourceColumn="Version" DataSetColumn="Version" />
+              <Mapping SourceColumn="PackQty" DataSetColumn="PackQty" />
+              <Mapping SourceColumn="SpecPack" DataSetColumn="SpecPack" />
+              <Mapping SourceColumn="PriceCode" DataSetColumn="PriceCode" />
+              <Mapping SourceColumn="ProdDesc" DataSetColumn="ProdDesc" />
+              <Mapping SourceColumn="DateProd" DataSetColumn="DateProd" />
+              <Mapping SourceColumn="PrivLbl" DataSetColumn="PrivLbl" />
+              <Mapping SourceColumn="ProdSize" DataSetColumn="ProdSize" />
+              <Mapping SourceColumn="YYMMDD" DataSetColumn="YYMMDD" />
+              <Mapping SourceColumn="FunDate" DataSetColumn="FunDate" />
+              <Mapping SourceColumn="CnFunDate" DataSetColumn="CnFunDate" />
+              <Mapping SourceColumn="AldiFunDate" DataSetColumn="AldiFunDate" />
+              <Mapping SourceColumn="SrgFunDate" DataSetColumn="SrgFunDate" />
+              <Mapping SourceColumn="PackDate" DataSetColumn="PackDate" />
+              <Mapping SourceColumn="NoNmFunDate" DataSetColumn="NoNmFunDate" />
+              <Mapping SourceColumn="CertNum" DataSetColumn="CertNum" />
+              <Mapping SourceColumn="Format Name" DataSetColumn="Format Name" />
+              <Mapping SourceColumn="UseByDte" DataSetColumn="UseByDte" />
+              <Mapping SourceColumn="YYMMDD55" DataSetColumn="YYMMDD55" />
+              <Mapping SourceColumn="Code55" DataSetColumn="Code55" />
+              <Mapping SourceColumn="FunDate55" DataSetColumn="FunDate55" />
+              <Mapping SourceColumn="MexFunDate" DataSetColumn="MexFunDate" />
+              <Mapping SourceColumn="SpanishDescr" DataSetColumn="SpanishDescr" />
+              <Mapping SourceColumn="WMPartNum" DataSetColumn="WMPartNum" />
+              <Mapping SourceColumn="EnglishDescr" DataSetColumn="EnglishDescr" />
+              <Mapping SourceColumn="DDMMYYDate" DataSetColumn="DDMMYYDate" />
+              <Mapping SourceColumn="Ingredients" DataSetColumn="Ingredients" />
+              <Mapping SourceColumn="NetWeight" DataSetColumn="NetWeight" />
+              <Mapping SourceColumn="DateInFile" DataSetColumn="DateInFile" />
+              <Mapping SourceColumn="WMUPC" DataSetColumn="WMUPC" />
+              <Mapping SourceColumn="ContNeto" DataSetColumn="ContNeto" />
+              <Mapping SourceColumn="SpanishDescr2" DataSetColumn="SpanishDescr2" />
+              <Mapping SourceColumn="EnglishDescr2" DataSetColumn="EnglishDescr2" />
+              <Mapping SourceColumn="FSProdDesc" DataSetColumn="FSProdDesc" />
+              <Mapping SourceColumn="NetWt" DataSetColumn="NetWt" />
+              <Mapping SourceColumn="FrenchDescr" DataSetColumn="FrenchDescr" />
+              <Mapping SourceColumn="EnglishDescr3" DataSetColumn="EnglishDescr3" />
+              <Mapping SourceColumn="USDA_Est" DataSetColumn="USDA_Est" />
+              <Mapping SourceColumn="NoNameFrenchDescr" DataSetColumn="NoNameFrenchDescr" />
+              <Mapping SourceColumn="NoNameEnglishDescr" DataSetColumn="NoNameEnglishDescr" />
+              <Mapping SourceColumn="ButCutFrenchDescr" DataSetColumn="ButCutFrenchDescr" />
+              <Mapping SourceColumn="ButCutEnglishDescr" DataSetColumn="ButCutEnglishDescr" />
+              <Mapping SourceColumn="PackDesc" DataSetColumn="PackDesc" />
+              <Mapping SourceColumn="AltIngrList" DataSetColumn="AltIngrList" />
+              <Mapping SourceColumn="MexProdDate" DataSetColumn="MexProdDate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="Warehouse.dbo.vwProdTick" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByOrder" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOrder" GeneratorSourceName="FillByOrder" GetMethodModifier="Public" GetMethodName="GetDataByOrder" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOrder" UserSourceName="FillByOrder">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   MfgOrd, GTIN, ItmUpc, ProdNo, Version, PackQty, SpecPack, PriceCode, ProdDesc, DateProd, PrivLbl, ProdSize, YYMMDD, FunDate, CnFunDate, AldiFunDate, SrgFunDate, PackDate, NoNmFunDate, CertNum, [Format Name], UseByDte, YYMMDD55, Code55, FunDate55, MexFunDate, SpanishDescr, WMPartNum, EnglishDescr, DDMMYYDate, 
+             Ingredients, NetWeight, DateInFile, WMUPC, ContNeto, SpanishDescr2, EnglishDescr2, FSProdDesc, NetWt, FrenchDescr, EnglishDescr3, USDA_Est, NoNameFrenchDescr, NoNameEnglishDescr, ButCutFrenchDescr, ButCutEnglishDescr, PackDesc, AltIngrList, MexProdDate
+FROM     dbo.vwProdTick
+WHERE   (MfgOrd = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="MfgOrd" DataSourceName="Warehouse.dbo.vwProdTick" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="MfgOrd" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MfgOrd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetProdTick" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetProdTick" msprop:Generator_UserDSName="DataSetProdTick">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwProdTick" msprop:Generator_TableClassName="vwProdTickDataTable" msprop:Generator_TableVarName="tablevwProdTick" msprop:Generator_TablePropName="vwProdTick" msprop:Generator_RowDeletingName="vwProdTickRowDeleting" msprop:Generator_RowChangingName="vwProdTickRowChanging" msprop:Generator_RowEvHandlerName="vwProdTickRowChangeEventHandler" msprop:Generator_RowDeletedName="vwProdTickRowDeleted" msprop:Generator_UserTableName="vwProdTick" msprop:Generator_RowChangedName="vwProdTickRowChanged" msprop:Generator_RowEvArgName="vwProdTickRowChangeEvent" msprop:Generator_RowClassName="vwProdTickRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MfgOrd" msprop:Generator_ColumnVarNameInTable="columnMfgOrd" msprop:Generator_ColumnPropNameInRow="MfgOrd" msprop:Generator_ColumnPropNameInTable="MfgOrdColumn" msprop:Generator_UserColumnName="MfgOrd" type="xs:int" />
+              <xs:element name="GTIN" msprop:Generator_ColumnVarNameInTable="columnGTIN" msprop:Generator_ColumnPropNameInRow="GTIN" msprop:Generator_ColumnPropNameInTable="GTINColumn" msprop:Generator_UserColumnName="GTIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItmUpc" msprop:Generator_ColumnVarNameInTable="columnItmUpc" msprop:Generator_ColumnPropNameInRow="ItmUpc" msprop:Generator_ColumnPropNameInTable="ItmUpcColumn" msprop:Generator_UserColumnName="ItmUpc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProdNo" msprop:Generator_ColumnVarNameInTable="columnProdNo" msprop:Generator_ColumnPropNameInRow="ProdNo" msprop:Generator_ColumnPropNameInTable="ProdNoColumn" msprop:Generator_UserColumnName="ProdNo" type="xs:int" minOccurs="0" />
+              <xs:element name="Version" msprop:Generator_ColumnVarNameInTable="columnVersion" msprop:Generator_ColumnPropNameInRow="Version" msprop:Generator_ColumnPropNameInTable="VersionColumn" msprop:Generator_UserColumnName="Version" type="xs:int" minOccurs="0" />
+              <xs:element name="PackQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPackQty" msprop:Generator_ColumnPropNameInRow="PackQty" msprop:Generator_ColumnPropNameInTable="PackQtyColumn" msprop:Generator_UserColumnName="PackQty" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpecPack" msprop:Generator_ColumnVarNameInTable="columnSpecPack" msprop:Generator_ColumnPropNameInRow="SpecPack" msprop:Generator_ColumnPropNameInTable="SpecPackColumn" msprop:Generator_UserColumnName="SpecPack" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PriceCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPriceCode" msprop:Generator_ColumnPropNameInRow="PriceCode" msprop:Generator_ColumnPropNameInTable="PriceCodeColumn" msprop:Generator_UserColumnName="PriceCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProdDesc" msprop:Generator_ColumnVarNameInTable="columnProdDesc" msprop:Generator_ColumnPropNameInRow="ProdDesc" msprop:Generator_ColumnPropNameInTable="ProdDescColumn" msprop:Generator_UserColumnName="ProdDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateProd" msprop:Generator_ColumnVarNameInTable="columnDateProd" msprop:Generator_ColumnPropNameInRow="DateProd" msprop:Generator_ColumnPropNameInTable="DateProdColumn" msprop:Generator_UserColumnName="DateProd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrivLbl" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrivLbl" msprop:Generator_ColumnPropNameInRow="PrivLbl" msprop:Generator_ColumnPropNameInTable="PrivLblColumn" msprop:Generator_UserColumnName="PrivLbl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProdSize" msprop:Generator_ColumnVarNameInTable="columnProdSize" msprop:Generator_ColumnPropNameInRow="ProdSize" msprop:Generator_ColumnPropNameInTable="ProdSizeColumn" msprop:Generator_UserColumnName="ProdSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YYMMDD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYYMMDD" msprop:Generator_ColumnPropNameInRow="YYMMDD" msprop:Generator_ColumnPropNameInTable="YYMMDDColumn" msprop:Generator_UserColumnName="YYMMDD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FunDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFunDate" msprop:Generator_ColumnPropNameInRow="FunDate" msprop:Generator_ColumnPropNameInTable="FunDateColumn" msprop:Generator_UserColumnName="FunDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CnFunDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCnFunDate" msprop:Generator_ColumnPropNameInRow="CnFunDate" msprop:Generator_ColumnPropNameInTable="CnFunDateColumn" msprop:Generator_UserColumnName="CnFunDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AldiFunDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAldiFunDate" msprop:Generator_ColumnPropNameInRow="AldiFunDate" msprop:Generator_ColumnPropNameInTable="AldiFunDateColumn" msprop:Generator_UserColumnName="AldiFunDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SrgFunDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSrgFunDate" msprop:Generator_ColumnPropNameInRow="SrgFunDate" msprop:Generator_ColumnPropNameInTable="SrgFunDateColumn" msprop:Generator_UserColumnName="SrgFunDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PackDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPackDate" msprop:Generator_ColumnPropNameInRow="PackDate" msprop:Generator_ColumnPropNameInTable="PackDateColumn" msprop:Generator_UserColumnName="PackDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoNmFunDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNoNmFunDate" msprop:Generator_ColumnPropNameInRow="NoNmFunDate" msprop:Generator_ColumnPropNameInTable="NoNmFunDateColumn" msprop:Generator_UserColumnName="NoNmFunDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CertNum" msprop:Generator_ColumnVarNameInTable="columnCertNum" msprop:Generator_ColumnPropNameInRow="CertNum" msprop:Generator_ColumnPropNameInTable="CertNumColumn" msprop:Generator_UserColumnName="CertNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Format_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnFormat_Name" msprop:Generator_ColumnPropNameInRow="Format_Name" msprop:Generator_ColumnPropNameInTable="Format_NameColumn" msprop:Generator_UserColumnName="Format Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UseByDte" msprop:Generator_ColumnVarNameInTable="columnUseByDte" msprop:Generator_ColumnPropNameInRow="UseByDte" msprop:Generator_ColumnPropNameInTable="UseByDteColumn" msprop:Generator_UserColumnName="UseByDte" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YYMMDD55" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYYMMDD55" msprop:Generator_ColumnPropNameInRow="YYMMDD55" msprop:Generator_ColumnPropNameInTable="YYMMDD55Column" msprop:Generator_UserColumnName="YYMMDD55" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code55" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCode55" msprop:Generator_ColumnPropNameInRow="Code55" msprop:Generator_ColumnPropNameInTable="Code55Column" msprop:Generator_UserColumnName="Code55" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FunDate55" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFunDate55" msprop:Generator_ColumnPropNameInRow="FunDate55" msprop:Generator_ColumnPropNameInTable="FunDate55Column" msprop:Generator_UserColumnName="FunDate55" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MexFunDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMexFunDate" msprop:Generator_ColumnPropNameInRow="MexFunDate" msprop:Generator_ColumnPropNameInTable="MexFunDateColumn" msprop:Generator_UserColumnName="MexFunDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpanishDescr" msprop:Generator_ColumnVarNameInTable="columnSpanishDescr" msprop:Generator_ColumnPropNameInRow="SpanishDescr" msprop:Generator_ColumnPropNameInTable="SpanishDescrColumn" msprop:Generator_UserColumnName="SpanishDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WMPartNum" msprop:Generator_ColumnVarNameInTable="columnWMPartNum" msprop:Generator_ColumnPropNameInRow="WMPartNum" msprop:Generator_ColumnPropNameInTable="WMPartNumColumn" msprop:Generator_UserColumnName="WMPartNum" type="xs:int" minOccurs="0" />
+              <xs:element name="EnglishDescr" msprop:Generator_ColumnVarNameInTable="columnEnglishDescr" msprop:Generator_ColumnPropNameInRow="EnglishDescr" msprop:Generator_ColumnPropNameInTable="EnglishDescrColumn" msprop:Generator_UserColumnName="EnglishDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DDMMYYDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDDMMYYDate" msprop:Generator_ColumnPropNameInRow="DDMMYYDate" msprop:Generator_ColumnPropNameInTable="DDMMYYDateColumn" msprop:Generator_UserColumnName="DDMMYYDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ingredients" msprop:Generator_ColumnVarNameInTable="columnIngredients" msprop:Generator_ColumnPropNameInRow="Ingredients" msprop:Generator_ColumnPropNameInTable="IngredientsColumn" msprop:Generator_UserColumnName="Ingredients" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetWeight" msprop:Generator_ColumnVarNameInTable="columnNetWeight" msprop:Generator_ColumnPropNameInRow="NetWeight" msprop:Generator_ColumnPropNameInTable="NetWeightColumn" msprop:Generator_UserColumnName="NetWeight" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateInFile" msprop:Generator_ColumnVarNameInTable="columnDateInFile" msprop:Generator_ColumnPropNameInRow="DateInFile" msprop:Generator_ColumnPropNameInTable="DateInFileColumn" msprop:Generator_UserColumnName="DateInFile" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WMUPC" msprop:Generator_ColumnVarNameInTable="columnWMUPC" msprop:Generator_ColumnPropNameInRow="WMUPC" msprop:Generator_ColumnPropNameInTable="WMUPCColumn" msprop:Generator_UserColumnName="WMUPC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContNeto" msprop:Generator_ColumnVarNameInTable="columnContNeto" msprop:Generator_ColumnPropNameInRow="ContNeto" msprop:Generator_ColumnPropNameInTable="ContNetoColumn" msprop:Generator_UserColumnName="ContNeto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpanishDescr2" msprop:Generator_ColumnVarNameInTable="columnSpanishDescr2" msprop:Generator_ColumnPropNameInRow="SpanishDescr2" msprop:Generator_ColumnPropNameInTable="SpanishDescr2Column" msprop:Generator_UserColumnName="SpanishDescr2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnglishDescr2" msprop:Generator_ColumnVarNameInTable="columnEnglishDescr2" msprop:Generator_ColumnPropNameInRow="EnglishDescr2" msprop:Generator_ColumnPropNameInTable="EnglishDescr2Column" msprop:Generator_UserColumnName="EnglishDescr2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FSProdDesc" msprop:Generator_ColumnVarNameInTable="columnFSProdDesc" msprop:Generator_ColumnPropNameInRow="FSProdDesc" msprop:Generator_ColumnPropNameInTable="FSProdDescColumn" msprop:Generator_UserColumnName="FSProdDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetWt" msprop:Generator_ColumnVarNameInTable="columnNetWt" msprop:Generator_ColumnPropNameInRow="NetWt" msprop:Generator_ColumnPropNameInTable="NetWtColumn" msprop:Generator_UserColumnName="NetWt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FrenchDescr" msprop:Generator_ColumnVarNameInTable="columnFrenchDescr" msprop:Generator_ColumnPropNameInRow="FrenchDescr" msprop:Generator_ColumnPropNameInTable="FrenchDescrColumn" msprop:Generator_UserColumnName="FrenchDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnglishDescr3" msprop:Generator_ColumnVarNameInTable="columnEnglishDescr3" msprop:Generator_ColumnPropNameInRow="EnglishDescr3" msprop:Generator_ColumnPropNameInTable="EnglishDescr3Column" msprop:Generator_UserColumnName="EnglishDescr3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USDA_Est" msprop:Generator_ColumnVarNameInTable="columnUSDA_Est" msprop:Generator_ColumnPropNameInRow="USDA_Est" msprop:Generator_ColumnPropNameInTable="USDA_EstColumn" msprop:Generator_UserColumnName="USDA_Est" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoNameFrenchDescr" msprop:Generator_ColumnVarNameInTable="columnNoNameFrenchDescr" msprop:Generator_ColumnPropNameInRow="NoNameFrenchDescr" msprop:Generator_ColumnPropNameInTable="NoNameFrenchDescrColumn" msprop:Generator_UserColumnName="NoNameFrenchDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoNameEnglishDescr" msprop:Generator_ColumnVarNameInTable="columnNoNameEnglishDescr" msprop:Generator_ColumnPropNameInRow="NoNameEnglishDescr" msprop:Generator_ColumnPropNameInTable="NoNameEnglishDescrColumn" msprop:Generator_UserColumnName="NoNameEnglishDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ButCutFrenchDescr" msprop:Generator_ColumnVarNameInTable="columnButCutFrenchDescr" msprop:Generator_ColumnPropNameInRow="ButCutFrenchDescr" msprop:Generator_ColumnPropNameInTable="ButCutFrenchDescrColumn" msprop:Generator_UserColumnName="ButCutFrenchDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ButCutEnglishDescr" msprop:Generator_ColumnVarNameInTable="columnButCutEnglishDescr" msprop:Generator_ColumnPropNameInRow="ButCutEnglishDescr" msprop:Generator_ColumnPropNameInTable="ButCutEnglishDescrColumn" msprop:Generator_UserColumnName="ButCutEnglishDescr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PackDesc" msprop:Generator_ColumnVarNameInTable="columnPackDesc" msprop:Generator_ColumnPropNameInRow="PackDesc" msprop:Generator_ColumnPropNameInTable="PackDescColumn" msprop:Generator_UserColumnName="PackDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AltIngrList" msprop:Generator_ColumnVarNameInTable="columnAltIngrList" msprop:Generator_ColumnPropNameInRow="AltIngrList" msprop:Generator_ColumnPropNameInTable="AltIngrListColumn" msprop:Generator_UserColumnName="AltIngrList" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MexProdDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMexProdDate" msprop:Generator_ColumnPropNameInRow="MexProdDate" msprop:Generator_ColumnPropNameInTable="MexProdDateColumn" msprop:Generator_UserColumnName="MexProdDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:vwProdTick" />
+      <xs:field xpath="mstns:MfgOrd" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

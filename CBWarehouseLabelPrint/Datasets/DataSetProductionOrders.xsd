@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetProductionOrders" targetNamespace="http://tempuri.org/DataSetProductionOrders.xsd" xmlns:mstns="http://tempuri.org/DataSetProductionOrders.xsd" xmlns="http://tempuri.org/DataSetProductionOrders.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DALConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DALConnectionString (MySettings)" PropertyReference="ApplicationSettings.CBWarehouseLabelPrint.My.MySettings.GlobalReference.Default.DALConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Production TicketsTableAdapter" GeneratorDataComponentClassName="Production_TicketsTableAdapter" Name="Production Tickets" UserDataComponentName="Production TicketsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="Warehouse.dbo.[Production Tickets]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   TOP 200 [Company Number], MfgOrdNumber, [Meat Code], [Package Qty], [Special Pack], [Line#] AS Line, [Shift#] AS Shift, [Item UPC #], [Product Description], [Product #], [Format Name], PackDesc, ProductNo, GTIN, Processed, OrderID, SchedDate, CanadaCert, [Code Date], [Price Code], [Date Produced], Version, [Private Label], DateInFile, 
+             OrderLineNo, ProductionComment, MOQUANA
+FROM     dbo.[Production Tickets]
+ORDER BY SchedDate DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Company Number" DataSetColumn="Company Number" />
+              <Mapping SourceColumn="MfgOrdNumber" DataSetColumn="MfgOrdNumber" />
+              <Mapping SourceColumn="Meat Code" DataSetColumn="Meat Code" />
+              <Mapping SourceColumn="Package Qty" DataSetColumn="Package Qty" />
+              <Mapping SourceColumn="Special Pack" DataSetColumn="Special Pack" />
+              <Mapping SourceColumn="Item UPC #" DataSetColumn="Item UPC #" />
+              <Mapping SourceColumn="Product Description" DataSetColumn="Product Description" />
+              <Mapping SourceColumn="Product #" DataSetColumn="Product #" />
+              <Mapping SourceColumn="Format Name" DataSetColumn="Format Name" />
+              <Mapping SourceColumn="PackDesc" DataSetColumn="PackDesc" />
+              <Mapping SourceColumn="ProductNo" DataSetColumn="ProductNo" />
+              <Mapping SourceColumn="GTIN" DataSetColumn="GTIN" />
+              <Mapping SourceColumn="Processed" DataSetColumn="Processed" />
+              <Mapping SourceColumn="OrderID" DataSetColumn="OrderID" />
+              <Mapping SourceColumn="SchedDate" DataSetColumn="SchedDate" />
+              <Mapping SourceColumn="Line" DataSetColumn="Line" />
+              <Mapping SourceColumn="Shift" DataSetColumn="Shift" />
+              <Mapping SourceColumn="CanadaCert" DataSetColumn="CanadaCert" />
+              <Mapping SourceColumn="Code Date" DataSetColumn="Code Date" />
+              <Mapping SourceColumn="Price Code" DataSetColumn="Price Code" />
+              <Mapping SourceColumn="Date Produced" DataSetColumn="Date Produced" />
+              <Mapping SourceColumn="Version" DataSetColumn="Version" />
+              <Mapping SourceColumn="Private Label" DataSetColumn="Private Label" />
+              <Mapping SourceColumn="DateInFile" DataSetColumn="DateInFile" />
+              <Mapping SourceColumn="OrderLineNo" DataSetColumn="OrderLineNo" />
+              <Mapping SourceColumn="ProductionComment" DataSetColumn="ProductionComment" />
+              <Mapping SourceColumn="MOQUANA" DataSetColumn="MOQUANA" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="Warehouse.dbo.[Production Tickets]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByLineSchedule" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLineSchedule" GeneratorSourceName="FillByLineSchedule" GetMethodModifier="Public" GetMethodName="GetDataByLineSchedule" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLineSchedule" UserSourceName="FillByLineSchedule">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   TOP 200 CanadaCert, [Code Date], [Company Number], [Date Produced], DateInFile, [Format Name], GTIN, [Item UPC #], [Line#] AS Line, MOQUANA, [Meat Code], MfgOrdNumber, OrderID, OrderLineNo, PackDesc, [Package Qty], [Price Code], [Private Label], Processed, [Product #], [Product Description], ProductNo, ProductionComment, 
+             SchedDate, [Shift#] AS Shift, [Special Pack], Version
+FROM     dbo.[Production Tickets]
+WHERE   ([Line#] = ?) AND ([Shift#] = ?) AND (SchedDate = DATEADD([DAY], DATEDIFF([DAY], 0, GETDATE()), 0))
+ORDER BY SchedDate DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Line#" DataSourceName="Warehouse.dbo.[Production Tickets]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="Line_" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Line" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="Shift#" DataSourceName="Warehouse.dbo.[Production Tickets]" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="Shift_" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="Shift" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="Warehouse.dbo.[Production Tickets]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProdOrder" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProdOrder" GeneratorSourceName="FillByProdOrder" GetMethodModifier="Public" GetMethodName="GetDataByProdOrder" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProdOrder" UserSourceName="FillByProdOrder">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP 200 CanadaCert, [Code Date], [Company Number], [Date Produced], DateInFile, [Format Name], GTIN, [Item UPC #], [Line#] AS Line, MOQUANA, [Meat Code], MfgOrdNumber, OrderID, OrderLineNo, PackDesc, [Package Qty], [Price Code], [Private Label], Processed, [Product #], [Product Description], ProductNo, ProductionComment, SchedDate, [Shift#] AS Shift, [Special Pack], Version FROM dbo.[Production Tickets] WHERE (MfgOrdNumber = ?) ORDER BY SchedDate DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="MfgOrdNumber" DataSourceName="Warehouse.dbo.[Production Tickets]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="MfgOrdNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MfgOrdNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="UpdateQuery">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE  dbo.[Production Tickets]
+SET        CanadaCert =?
+WHERE   (MfgOrdNumber = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="CanadaCert" DataSourceName="Warehouse.dbo.[Production Tickets]" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="CanadaCert" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="CanadaCert" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="MfgOrdNumber" DataSourceName="Warehouse.dbo.[Production Tickets]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="Original_MfgOrdNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MfgOrdNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetProductionOrders" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetProductionOrders" msprop:Generator_UserDSName="DataSetProductionOrders">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Production_x0020_Tickets" msprop:Generator_TableClassName="Production_TicketsDataTable" msprop:Generator_TableVarName="tableProduction_Tickets" msprop:Generator_TablePropName="Production_Tickets" msprop:Generator_RowDeletingName="Production_TicketsRowDeleting" msprop:Generator_RowChangingName="Production_TicketsRowChanging" msprop:Generator_RowEvHandlerName="Production_TicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="Production_TicketsRowDeleted" msprop:Generator_UserTableName="Production Tickets" msprop:Generator_RowChangedName="Production_TicketsRowChanged" msprop:Generator_RowEvArgName="Production_TicketsRowChangeEvent" msprop:Generator_RowClassName="Production_TicketsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnCompany_Number" msprop:Generator_ColumnPropNameInRow="Company_Number" msprop:Generator_ColumnPropNameInTable="Company_NumberColumn" msprop:Generator_UserColumnName="Company Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MfgOrdNumber" msprop:Generator_ColumnVarNameInTable="columnMfgOrdNumber" msprop:Generator_ColumnPropNameInRow="MfgOrdNumber" msprop:Generator_ColumnPropNameInTable="MfgOrdNumberColumn" msprop:Generator_UserColumnName="MfgOrdNumber" type="xs:int" />
+              <xs:element name="Meat_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnMeat_Code" msprop:Generator_ColumnPropNameInRow="Meat_Code" msprop:Generator_ColumnPropNameInTable="Meat_CodeColumn" msprop:Generator_UserColumnName="Meat Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Package_x0020_Qty" msprop:Generator_ColumnVarNameInTable="columnPackage_Qty" msprop:Generator_ColumnPropNameInRow="Package_Qty" msprop:Generator_ColumnPropNameInTable="Package_QtyColumn" msprop:Generator_UserColumnName="Package Qty" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Special_x0020_Pack" msprop:Generator_ColumnVarNameInTable="columnSpecial_Pack" msprop:Generator_ColumnPropNameInRow="Special_Pack" msprop:Generator_ColumnPropNameInTable="Special_PackColumn" msprop:Generator_UserColumnName="Special Pack" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Item_x0020_UPC_x0020__x0023_" msprop:Generator_ColumnVarNameInTable="_columnItem_UPC__" msprop:Generator_ColumnPropNameInRow="_Item_UPC__" msprop:Generator_ColumnPropNameInTable="_Item_UPC__Column" msprop:Generator_UserColumnName="Item UPC #" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_x0020_Description" msprop:Generator_ColumnVarNameInTable="columnProduct_Description" msprop:Generator_ColumnPropNameInRow="Product_Description" msprop:Generator_ColumnPropNameInTable="Product_DescriptionColumn" msprop:Generator_UserColumnName="Product Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Product_x0020__x0023_" msprop:Generator_ColumnVarNameInTable="_columnProduct__" msprop:Generator_ColumnPropNameInRow="_Product__" msprop:Generator_ColumnPropNameInTable="_Product__Column" msprop:Generator_UserColumnName="Product #" type="xs:int" minOccurs="0" />
+              <xs:element name="Format_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnFormat_Name" msprop:Generator_ColumnPropNameInRow="Format_Name" msprop:Generator_ColumnPropNameInTable="Format_NameColumn" msprop:Generator_UserColumnName="Format Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PackDesc" msprop:Generator_ColumnVarNameInTable="columnPackDesc" msprop:Generator_ColumnPropNameInRow="PackDesc" msprop:Generator_ColumnPropNameInTable="PackDescColumn" msprop:Generator_UserColumnName="PackDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductNo" msprop:Generator_ColumnVarNameInTable="columnProductNo" msprop:Generator_ColumnPropNameInRow="ProductNo" msprop:Generator_ColumnPropNameInTable="ProductNoColumn" msprop:Generator_UserColumnName="ProductNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GTIN" msprop:Generator_ColumnVarNameInTable="columnGTIN" msprop:Generator_ColumnPropNameInRow="GTIN" msprop:Generator_ColumnPropNameInTable="GTINColumn" msprop:Generator_UserColumnName="GTIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Processed" msprop:Generator_ColumnVarNameInTable="columnProcessed" msprop:Generator_ColumnPropNameInRow="Processed" msprop:Generator_ColumnPropNameInTable="ProcessedColumn" msprop:Generator_UserColumnName="Processed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderID" msprop:Generator_ColumnVarNameInTable="columnOrderID" msprop:Generator_ColumnPropNameInRow="OrderID" msprop:Generator_ColumnPropNameInTable="OrderIDColumn" msprop:Generator_UserColumnName="OrderID" type="xs:long" minOccurs="0" />
+              <xs:element name="SchedDate" msprop:Generator_ColumnVarNameInTable="columnSchedDate" msprop:Generator_ColumnPropNameInRow="SchedDate" msprop:Generator_ColumnPropNameInTable="SchedDateColumn" msprop:Generator_UserColumnName="SchedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Line" msprop:Generator_ColumnVarNameInTable="columnLine" msprop:Generator_ColumnPropNameInRow="Line" msprop:Generator_ColumnPropNameInTable="LineColumn" msprop:Generator_UserColumnName="Line" type="xs:int" />
+              <xs:element name="Shift" msprop:Generator_ColumnVarNameInTable="columnShift" msprop:Generator_ColumnPropNameInRow="Shift" msprop:Generator_ColumnPropNameInTable="ShiftColumn" msprop:Generator_UserColumnName="Shift">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CanadaCert" msprop:Generator_ColumnVarNameInTable="columnCanadaCert" msprop:Generator_ColumnPropNameInRow="CanadaCert" msprop:Generator_ColumnPropNameInTable="CanadaCertColumn" msprop:Generator_UserColumnName="CanadaCert" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Code_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnCode_Date" msprop:Generator_ColumnPropNameInRow="Code_Date" msprop:Generator_ColumnPropNameInTable="Code_DateColumn" msprop:Generator_UserColumnName="Code Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price_x0020_Code" msprop:Generator_ColumnVarNameInTable="columnPrice_Code" msprop:Generator_ColumnPropNameInRow="Price_Code" msprop:Generator_ColumnPropNameInTable="Price_CodeColumn" msprop:Generator_UserColumnName="Price Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_x0020_Produced" msprop:Generator_ColumnVarNameInTable="columnDate_Produced" msprop:Generator_ColumnPropNameInRow="Date_Produced" msprop:Generator_ColumnPropNameInTable="Date_ProducedColumn" msprop:Generator_UserColumnName="Date Produced">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Version" msprop:Generator_ColumnVarNameInTable="columnVersion" msprop:Generator_ColumnPropNameInRow="Version" msprop:Generator_ColumnPropNameInTable="VersionColumn" msprop:Generator_UserColumnName="Version" type="xs:int" minOccurs="0" />
+              <xs:element name="Private_x0020_Label" msprop:Generator_ColumnVarNameInTable="columnPrivate_Label" msprop:Generator_ColumnPropNameInRow="Private_Label" msprop:Generator_ColumnPropNameInTable="Private_LabelColumn" msprop:Generator_UserColumnName="Private Label" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateInFile" msprop:Generator_ColumnVarNameInTable="columnDateInFile" msprop:Generator_ColumnPropNameInRow="DateInFile" msprop:Generator_ColumnPropNameInTable="DateInFileColumn" msprop:Generator_UserColumnName="DateInFile" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderLineNo" msprop:Generator_ColumnVarNameInTable="columnOrderLineNo" msprop:Generator_ColumnPropNameInRow="OrderLineNo" msprop:Generator_ColumnPropNameInTable="OrderLineNoColumn" msprop:Generator_UserColumnName="OrderLineNo" type="xs:int" minOccurs="0" />
+              <xs:element name="ProductionComment" msprop:Generator_ColumnVarNameInTable="columnProductionComment" msprop:Generator_ColumnPropNameInRow="ProductionComment" msprop:Generator_ColumnPropNameInTable="ProductionCommentColumn" msprop:Generator_UserColumnName="ProductionComment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOQUANA" msprop:Generator_ColumnVarNameInTable="columnMOQUANA" msprop:Generator_ColumnPropNameInRow="MOQUANA" msprop:Generator_ColumnPropNameInTable="MOQUANAColumn" msprop:Generator_UserColumnName="MOQUANA" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Production_x0020_Tickets" />
+      <xs:field xpath="mstns:MfgOrdNumber" />
+      <xs:field xpath="mstns:Line" />
+      <xs:field xpath="mstns:Shift" />
+      <xs:field xpath="mstns:Date_x0020_Produced" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

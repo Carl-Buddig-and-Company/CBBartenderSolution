@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12DFF98F-669D-4273-B3DE-F3764A76AC5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CBWarehouseLabelPrint</RootNamespace>
+    <AssemblyName>CBWarehouseLabelPrint</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CBWarehouseLabelPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CBWarehouseLabelPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>CBWarehouseLabelPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>CBWarehouseLabelPrint.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datasets\DataSetCanadaCert.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCanadaCert.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetCanadaCert.vb">
+      <DependentUpon>DataSetCanadaCert.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetKioskSelection.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKioskSelection.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetKioskSelection.vb">
+      <DependentUpon>DataSetKioskSelection.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetLocations.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLocations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetPrinterTypes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrinterTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetProdTick.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProdTick.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetProdTick.vb">
+      <DependentUpon>DataSetProdTick.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataUtility.vb" />
+    <Compile Include="Datasets\DataSetKiosk.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKiosk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetKioskServer.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKioskServer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetLineMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLineMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetPrinters.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrinters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetPrinters.vb">
+      <DependentUpon>DataSetPrinters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSetProductionOrders.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProductionOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\FullDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FullDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\FullDataset.vb">
+      <DependentUpon>FullDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Datasets\DataSetCanadaCert.xsc">
+      <DependentUpon>DataSetCanadaCert.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetCanadaCert.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCanadaCert.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetCanadaCert.xss">
+      <DependentUpon>DataSetCanadaCert.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetKiosk.xsc">
+      <DependentUpon>DataSetKiosk.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetKiosk.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKiosk.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetKiosk.xss">
+      <DependentUpon>DataSetKiosk.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetKioskSelection.xsc">
+      <DependentUpon>DataSetKioskSelection.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetKioskSelection.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKioskSelection.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetKioskSelection.xss">
+      <DependentUpon>DataSetKioskSelection.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetKioskServer.xsc">
+      <DependentUpon>DataSetKioskServer.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetKioskServer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKioskServer.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetKioskServer.xss">
+      <DependentUpon>DataSetKioskServer.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetLineMaster.xsc">
+      <DependentUpon>DataSetLineMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetLineMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLineMaster.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetLineMaster.xss">
+      <DependentUpon>DataSetLineMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetLocations.xsc">
+      <DependentUpon>DataSetLocations.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetLocations.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLocations.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetLocations.xss">
+      <DependentUpon>DataSetLocations.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetPrinters.xsc">
+      <DependentUpon>DataSetPrinters.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetPrinters.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrinters.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetPrinters.xss">
+      <DependentUpon>DataSetPrinters.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetPrinterTypes.xsc">
+      <DependentUpon>DataSetPrinterTypes.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetPrinterTypes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrinterTypes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetPrinterTypes.xss">
+      <DependentUpon>DataSetPrinterTypes.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetProdTick.xsc">
+      <DependentUpon>DataSetProdTick.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetProdTick.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProdTick.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetProdTick.xss">
+      <DependentUpon>DataSetProdTick.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetProductionOrders.xsc">
+      <DependentUpon>DataSetProductionOrders.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSetProductionOrders.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProductionOrders.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSetProductionOrders.xss">
+      <DependentUpon>DataSetProductionOrders.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\FullDataset.xsc">
+      <DependentUpon>FullDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\FullDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FullDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datasets\FullDataset.xss">
+      <DependentUpon>FullDataset.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CB.WebLabel.Framework\CB.WebLabel.Framework.vbproj">
+      <Project>{4A8C5A5D-500E-4773-AFAD-C26818FBB3E3}</Project>
+      <Name>CB.WebLabel.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

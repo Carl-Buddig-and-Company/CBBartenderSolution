@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetLocations" targetNamespace="http://tempuri.org/DataSetLocations.xsd" xmlns:mstns="http://tempuri.org/DataSetLocations.xsd" xmlns="http://tempuri.org/DataSetLocations.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DALConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DALConnectionString (MySettings)" PropertyReference="ApplicationSettings.CBWarehouseLabelPrint.My.MySettings.GlobalReference.Default.DALConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlantMasterTableAdapter" GeneratorDataComponentClassName="PlantMasterTableAdapter" Name="PlantMaster" UserDataComponentName="PlantMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectName="Warehouse.dbo.PlantMaster" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Plant, PlantDesc, ProdFacility, Abrev, Packaging, MfgCode, AXSite, Shipping FROM dbo.PlantMaster</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Plant" DataSetColumn="Plant" />
+              <Mapping SourceColumn="PlantDesc" DataSetColumn="PlantDesc" />
+              <Mapping SourceColumn="ProdFacility" DataSetColumn="ProdFacility" />
+              <Mapping SourceColumn="Abrev" DataSetColumn="Abrev" />
+              <Mapping SourceColumn="Packaging" DataSetColumn="Packaging" />
+              <Mapping SourceColumn="MfgCode" DataSetColumn="MfgCode" />
+              <Mapping SourceColumn="AXSite" DataSetColumn="AXSite" />
+              <Mapping SourceColumn="Shipping" DataSetColumn="Shipping" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetLocations" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetLocations" msprop:Generator_UserDSName="DataSetLocations">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PlantMaster" msprop:Generator_TableClassName="PlantMasterDataTable" msprop:Generator_TableVarName="tablePlantMaster" msprop:Generator_RowChangedName="PlantMasterRowChanged" msprop:Generator_TablePropName="PlantMaster" msprop:Generator_RowDeletingName="PlantMasterRowDeleting" msprop:Generator_RowChangingName="PlantMasterRowChanging" msprop:Generator_RowEvHandlerName="PlantMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="PlantMasterRowDeleted" msprop:Generator_RowClassName="PlantMasterRow" msprop:Generator_UserTableName="PlantMaster" msprop:Generator_RowEvArgName="PlantMasterRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Plant" msprop:Generator_ColumnVarNameInTable="columnPlant" msprop:Generator_ColumnPropNameInRow="Plant" msprop:Generator_ColumnPropNameInTable="PlantColumn" msprop:Generator_UserColumnName="Plant" type="xs:int" />
+              <xs:element name="PlantDesc" msprop:Generator_ColumnVarNameInTable="columnPlantDesc" msprop:Generator_ColumnPropNameInRow="PlantDesc" msprop:Generator_ColumnPropNameInTable="PlantDescColumn" msprop:Generator_UserColumnName="PlantDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProdFacility" msprop:Generator_ColumnVarNameInTable="columnProdFacility" msprop:Generator_ColumnPropNameInRow="ProdFacility" msprop:Generator_ColumnPropNameInTable="ProdFacilityColumn" msprop:Generator_UserColumnName="ProdFacility" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Abrev" msprop:Generator_ColumnVarNameInTable="columnAbrev" msprop:Generator_ColumnPropNameInRow="Abrev" msprop:Generator_ColumnPropNameInTable="AbrevColumn" msprop:Generator_UserColumnName="Abrev" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Packaging" msprop:Generator_ColumnVarNameInTable="columnPackaging" msprop:Generator_ColumnPropNameInRow="Packaging" msprop:Generator_ColumnPropNameInTable="PackagingColumn" msprop:Generator_UserColumnName="Packaging" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MfgCode" msprop:Generator_ColumnVarNameInTable="columnMfgCode" msprop:Generator_ColumnPropNameInRow="MfgCode" msprop:Generator_ColumnPropNameInTable="MfgCodeColumn" msprop:Generator_UserColumnName="MfgCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AXSite" msprop:Generator_ColumnVarNameInTable="columnAXSite" msprop:Generator_ColumnPropNameInRow="AXSite" msprop:Generator_ColumnPropNameInTable="AXSiteColumn" msprop:Generator_UserColumnName="AXSite" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipping" msprop:Generator_ColumnVarNameInTable="columnShipping" msprop:Generator_ColumnPropNameInRow="Shipping" msprop:Generator_ColumnPropNameInTable="ShippingColumn" msprop:Generator_UserColumnName="Shipping" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlantMaster" />
+      <xs:field xpath="mstns:Plant" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

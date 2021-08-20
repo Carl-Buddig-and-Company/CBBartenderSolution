@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetKioskSelection" targetNamespace="http://tempuri.org/DataSetKioskSelection.xsd" xmlns:mstns="http://tempuri.org/DataSetKioskSelection.xsd" xmlns="http://tempuri.org/DataSetKioskSelection.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DALConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DALConnectionString (MySettings)" PropertyReference="ApplicationSettings.CBWarehouseLabelPrint.My.MySettings.GlobalReference.Default.DALConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KioskTableAdapter" GeneratorDataComponentClassName="KioskTableAdapter" Name="KioskDataTable" UserDataComponentName="KioskTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   dbo.LineMaster.Location, dbo.Kiosk.strKioskName, dbo.Kiosk.strComputerName, dbo.Printer.strPrinterName, dbo.PrinterType.strPrinterTypeName, dbo.LineMaster.fk_nPrinterId, dbo.LineMaster.Plant, dbo.LineMaster.Active, dbo.LineMaster.fk_nDefaultKioskId, dbo.Printer.strIPAddress, dbo.Printer.fk_nPrinterTypeId, 
+             dbo.PrinterType.strPrinterCode, dbo.PrinterType.strPrinterResetExpression, dbo.PrinterType.strLabelType
+FROM     dbo.LineMaster, dbo.Kiosk, dbo.Printer, dbo.PrinterType
+WHERE   dbo.LineMaster.fk_nDefaultKioskId = dbo.Kiosk.pk_nKioskId AND dbo.LineMaster.fk_nPrinterId = dbo.Printer.pk_nPrinterId AND dbo.Printer.fk_nPrinterTypeId = dbo.PrinterType.pk_nPrinterTypeId
+GROUP BY dbo.LineMaster.Location, dbo.Kiosk.strKioskName, dbo.LineMaster.Plant, dbo.LineMaster.Active, dbo.LineMaster.fk_nDefaultKioskId, dbo.LineMaster.fk_nPrinterId, dbo.Kiosk.strComputerName, dbo.Printer.strPrinterName, dbo.Printer.strIPAddress, dbo.Printer.fk_nPrinterTypeId, dbo.PrinterType.strPrinterTypeName, 
+             dbo.PrinterType.strPrinterCode, dbo.PrinterType.strPrinterResetExpression, dbo.PrinterType.strLabelType
+HAVING   (dbo.LineMaster.Active = 'Y')
+ORDER BY dbo.Kiosk.strKioskName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Location" DataSetColumn="Location" />
+              <Mapping SourceColumn="strKioskName" DataSetColumn="strKioskName" />
+              <Mapping SourceColumn="strComputerName" DataSetColumn="strComputerName" />
+              <Mapping SourceColumn="strPrinterName" DataSetColumn="strPrinterName" />
+              <Mapping SourceColumn="strPrinterTypeName" DataSetColumn="strPrinterTypeName" />
+              <Mapping SourceColumn="fk_nPrinterId" DataSetColumn="fk_nPrinterId" />
+              <Mapping SourceColumn="Plant" DataSetColumn="Plant" />
+              <Mapping SourceColumn="Active" DataSetColumn="Active" />
+              <Mapping SourceColumn="fk_nDefaultKioskId" DataSetColumn="fk_nDefaultKioskId" />
+              <Mapping SourceColumn="strIPAddress" DataSetColumn="strIPAddress" />
+              <Mapping SourceColumn="fk_nPrinterTypeId" DataSetColumn="fk_nPrinterTypeId" />
+              <Mapping SourceColumn="strPrinterCode" DataSetColumn="strPrinterCode" />
+              <Mapping SourceColumn="strPrinterResetExpression" DataSetColumn="strPrinterResetExpression" />
+              <Mapping SourceColumn="strLabelType" DataSetColumn="strLabelType" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByKiosk" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByKiosk" GeneratorSourceName="FillByKiosk" GetMethodModifier="Public" GetMethodName="GetDataByKiosk" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByKiosk" UserSourceName="FillByKiosk">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   dbo.LineMaster.Location, dbo.Kiosk.strKioskName, dbo.Kiosk.strComputerName, dbo.Printer.strPrinterName, dbo.PrinterType.strPrinterTypeName, dbo.LineMaster.fk_nPrinterId, dbo.LineMaster.Plant, dbo.LineMaster.Active, dbo.LineMaster.fk_nDefaultKioskId, dbo.Printer.strIPAddress, dbo.Printer.fk_nPrinterTypeId, 
+             dbo.PrinterType.strPrinterCode, dbo.PrinterType.strPrinterResetExpression, dbo.PrinterType.strLabelType
+FROM     dbo.LineMaster, dbo.Kiosk, dbo.Printer, dbo.PrinterType
+WHERE   dbo.LineMaster.fk_nDefaultKioskId = dbo.Kiosk.pk_nKioskId AND dbo.LineMaster.fk_nPrinterId = dbo.Printer.pk_nPrinterId AND dbo.Printer.fk_nPrinterTypeId = dbo.PrinterType.pk_nPrinterTypeId
+GROUP BY dbo.LineMaster.Location, dbo.Kiosk.strKioskName, dbo.LineMaster.Plant, dbo.LineMaster.Active, dbo.LineMaster.fk_nDefaultKioskId, dbo.LineMaster.fk_nPrinterId, dbo.Kiosk.strComputerName, dbo.Printer.strPrinterName, dbo.Printer.strIPAddress, dbo.Printer.fk_nPrinterTypeId, dbo.PrinterType.strPrinterTypeName, 
+             dbo.PrinterType.strPrinterCode, dbo.PrinterType.strPrinterResetExpression, dbo.PrinterType.strLabelType
+HAVING   (dbo.LineMaster.Active = 'Y') AND (dbo.LineMaster.fk_nDefaultKioskId = ?)
+ORDER BY dbo.Kiosk.strKioskName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="fk_nDefaultKioskId" DataSourceName="Warehouse.dbo.LineMaster" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="fk_nDefaultKioskId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="fk_nDefaultKioskId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DALConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByPlant" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPlant" GeneratorSourceName="FillByPlant" GetMethodModifier="Public" GetMethodName="GetDataByPlant" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPlant" UserSourceName="FillByPlant">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   dbo.LineMaster.Location, dbo.Kiosk.strKioskName, dbo.Kiosk.strComputerName, dbo.Printer.strPrinterName, dbo.PrinterType.strPrinterTypeName, dbo.LineMaster.fk_nPrinterId, dbo.LineMaster.Plant, dbo.LineMaster.Active, dbo.LineMaster.fk_nDefaultKioskId, dbo.Printer.strIPAddress, dbo.Printer.fk_nPrinterTypeId, 
+             dbo.PrinterType.strPrinterCode, dbo.PrinterType.strPrinterResetExpression, dbo.PrinterType.strLabelType
+FROM     dbo.LineMaster, dbo.Kiosk, dbo.Printer, dbo.PrinterType
+WHERE   dbo.LineMaster.fk_nDefaultKioskId = dbo.Kiosk.pk_nKioskId AND dbo.LineMaster.fk_nPrinterId = dbo.Printer.pk_nPrinterId AND dbo.Printer.fk_nPrinterTypeId = dbo.PrinterType.pk_nPrinterTypeId
+GROUP BY dbo.LineMaster.Location, dbo.Kiosk.strKioskName, dbo.LineMaster.Plant, dbo.LineMaster.Active, dbo.LineMaster.fk_nDefaultKioskId, dbo.LineMaster.fk_nPrinterId, dbo.Kiosk.strComputerName, dbo.Printer.strPrinterName, dbo.Printer.strIPAddress, dbo.Printer.fk_nPrinterTypeId, dbo.PrinterType.strPrinterTypeName, 
+             dbo.PrinterType.strPrinterCode, dbo.PrinterType.strPrinterResetExpression, dbo.PrinterType.strLabelType
+HAVING   (dbo.LineMaster.Active = 'Y') AND (dbo.LineMaster.Plant = ?)
+ORDER BY dbo.Kiosk.strKioskName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="Plant" DataSourceName="Warehouse.dbo.LineMaster" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="Plant" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Plant" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetKioskSelection" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetKioskSelection" msprop:Generator_UserDSName="DataSetKioskSelection">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KioskDataTable" msprop:Generator_TableClassName="KioskDataTableDataTable" msprop:Generator_TableVarName="tableKioskDataTable" msprop:Generator_RowChangedName="KioskDataTableRowChanged" msprop:Generator_TablePropName="KioskDataTable" msprop:Generator_RowDeletingName="KioskDataTableRowDeleting" msprop:Generator_RowChangingName="KioskDataTableRowChanging" msprop:Generator_RowEvHandlerName="KioskDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="KioskDataTableRowDeleted" msprop:Generator_RowClassName="KioskDataTableRow" msprop:Generator_UserTableName="KioskDataTable" msprop:Generator_RowEvArgName="KioskDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strKioskName" msprop:Generator_ColumnVarNameInTable="columnstrKioskName" msprop:Generator_ColumnPropNameInRow="strKioskName" msprop:Generator_ColumnPropNameInTable="strKioskNameColumn" msprop:Generator_UserColumnName="strKioskName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strComputerName" msprop:Generator_ColumnVarNameInTable="columnstrComputerName" msprop:Generator_ColumnPropNameInRow="strComputerName" msprop:Generator_ColumnPropNameInTable="strComputerNameColumn" msprop:Generator_UserColumnName="strComputerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strPrinterName" msprop:Generator_ColumnVarNameInTable="columnstrPrinterName" msprop:Generator_ColumnPropNameInRow="strPrinterName" msprop:Generator_ColumnPropNameInTable="strPrinterNameColumn" msprop:Generator_UserColumnName="strPrinterName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strPrinterTypeName" msprop:Generator_ColumnVarNameInTable="columnstrPrinterTypeName" msprop:Generator_ColumnPropNameInRow="strPrinterTypeName" msprop:Generator_ColumnPropNameInTable="strPrinterTypeNameColumn" msprop:Generator_UserColumnName="strPrinterTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fk_nPrinterId" msprop:Generator_ColumnVarNameInTable="columnfk_nPrinterId" msprop:Generator_ColumnPropNameInRow="fk_nPrinterId" msprop:Generator_ColumnPropNameInTable="fk_nPrinterIdColumn" msprop:Generator_UserColumnName="fk_nPrinterId" type="xs:int" minOccurs="0" />
+              <xs:element name="Plant" msprop:Generator_ColumnVarNameInTable="columnPlant" msprop:Generator_ColumnPropNameInRow="Plant" msprop:Generator_ColumnPropNameInTable="PlantColumn" msprop:Generator_UserColumnName="Plant" type="xs:int" minOccurs="0" />
+              <xs:element name="Active" msprop:Generator_ColumnVarNameInTable="columnActive" msprop:Generator_ColumnPropNameInRow="Active" msprop:Generator_ColumnPropNameInTable="ActiveColumn" msprop:Generator_UserColumnName="Active" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fk_nDefaultKioskId" msprop:Generator_ColumnVarNameInTable="columnfk_nDefaultKioskId" msprop:Generator_ColumnPropNameInRow="fk_nDefaultKioskId" msprop:Generator_ColumnPropNameInTable="fk_nDefaultKioskIdColumn" msprop:Generator_UserColumnName="fk_nDefaultKioskId" type="xs:int" minOccurs="0" />
+              <xs:element name="strIPAddress" msprop:Generator_ColumnVarNameInTable="columnstrIPAddress" msprop:Generator_ColumnPropNameInRow="strIPAddress" msprop:Generator_ColumnPropNameInTable="strIPAddressColumn" msprop:Generator_UserColumnName="strIPAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fk_nPrinterTypeId" msprop:Generator_ColumnVarNameInTable="columnfk_nPrinterTypeId" msprop:Generator_ColumnPropNameInRow="fk_nPrinterTypeId" msprop:Generator_ColumnPropNameInTable="fk_nPrinterTypeIdColumn" msprop:Generator_UserColumnName="fk_nPrinterTypeId" type="xs:int" minOccurs="0" />
+              <xs:element name="strPrinterCode" msprop:Generator_ColumnVarNameInTable="columnstrPrinterCode" msprop:Generator_ColumnPropNameInRow="strPrinterCode" msprop:Generator_ColumnPropNameInTable="strPrinterCodeColumn" msprop:Generator_UserColumnName="strPrinterCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strPrinterResetExpression" msprop:Generator_ColumnVarNameInTable="columnstrPrinterResetExpression" msprop:Generator_ColumnPropNameInRow="strPrinterResetExpression" msprop:Generator_ColumnPropNameInTable="strPrinterResetExpressionColumn" msprop:Generator_UserColumnName="strPrinterResetExpression" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strLabelType" msprop:Generator_ColumnVarNameInTable="columnstrLabelType" msprop:Generator_ColumnPropNameInRow="strLabelType" msprop:Generator_ColumnPropNameInTable="strLabelTypeColumn" msprop:Generator_UserColumnName="strLabelType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
